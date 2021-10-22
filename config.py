@@ -7,8 +7,8 @@ from  dotenv  import  load_dotenv, find_dotenv
 
 load_dotenv (find_dotenv())
 
-app.config['BASIC_AUTH_USERNAME'] = 'silsil'
-app.config['BASIC_AUTH_PASSWORD'] = '1234567'
+app.config['BASIC_AUTH_USERNAME'] = '' #insira usuário
+app.config['BASIC_AUTH_PASSWORD'] = '' #insira senha
 
 auth = BasicAuth(app)
 
@@ -16,12 +16,10 @@ auth = BasicAuth(app)
 mysql = MySQL()
 
 mysql = MySQL()
-app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = '' #insira a sua senha do DB
-app.config['MYSQL_DATABASE_DB'] = 'db_clientes' #insira o nome do seu DB
-app.config['MYSQL_DATABASE_DB'] = 'db_produtos' #insira o nome do seu DB
-app.config['MYSQL_DATABASE_DB'] = 'db_vendas' #insira o nome do seu DB
-app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+app.config['MYSQL_DATABASE_USER'] = '' #insira o nome do seu usuário
+app.config['MYSQL_DATABASE_PASSWORD'] = '' #insira a sua senha do banco
+app.config['MYSQL_DATABASE_DB'] = '' #insira o nome do seu banco
+app.config['MYSQL_DATABASE_HOST'] = '' #insira o nome do seu host
 
 
 mysql.init_app(app)
